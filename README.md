@@ -1,9 +1,9 @@
 # maplibre-ekosystem
 
-[![Quality Gate Status](https://sonar.portal.kalisio.com/api/project_badges/measure?project=kalisio-&metric=alert_status&token=sqb_4b1fd34b21813576749637e9c644ffd21ed8fa74)](https://sonar.portal.kalisio.com/dashboard?id=kalisio-maplibre-ekosystem)
-[![Maintainability Rating](https://sonar.portal.kalisio.com/api/project_badges/measure?project=kalisio-maplibre-ekosystem&metric=software_quality_maintainability_rating&token=sqb_4b1fd34b21813576749637e9c644ffd21ed8fa74)](https://sonar.portal.kalisio.com/dashboard?id=kalisio-maplibre-ekosystem)
-[![Security Rating](https://sonar.portal.kalisio.com/api/project_badges/measure?project=kalisio-maplibre-ekosystem&metric=software_quality_security_rating&token=sqb_4b1fd34b21813576749637e9c644ffd21ed8fa74)](https://sonar.portal.kalisio.com/dashboard?id=kalisio-maplibre-ekosystem)
-[![Coverage](https://sonar.portal.kalisio.com/api/project_badges/measure?project=kalisio-maplibre-ekosystem&metric=coverage&token=sqb_4b1fd34b21813576749637e9c644ffd21ed8fa74)](https://sonar.portal.kalisio.com/dashboard?id=kalisio-maplibre-ekosystem)
+[![Quality Gate Status](https://sonar.portal.kalisio.com/api/project_badges/measure?project=kalisio-maplibre-ekosystem&metric=alert_status&token=sqp_5c7d8cf0d30f02f9d81821a88e9f236ddc70c5aa)](https://sonar.portal.kalisio.com/dashboard?id=kalisio-maplibre-ekosystem)
+[![Maintainability Rating](https://sonar.portal.kalisio.com/api/project_badges/measure?project=kalisio-maplibre-ekosystem&metric=software_quality_maintainability_rating&token=sqp_5c7d8cf0d30f02f9d81821a88e9f236ddc70c5aa)](https://sonar.portal.kalisio.com/dashboard?id=kalisio-maplibre-ekosystem)
+[![Security Rating](https://sonar.portal.kalisio.com/api/project_badges/measure?project=kalisio-maplibre-ekosystem&metric=software_quality_security_rating&token=sqp_5c7d8cf0d30f02f9d81821a88e9f236ddc70c5aa)](https://sonar.portal.kalisio.com/dashboard?id=kalisio-maplibre-ekosystem)
+[![Coverage](https://sonar.portal.kalisio.com/api/project_badges/measure?project=kalisio-maplibre-ekosystem&metric=coverage&token=sqp_5c7d8cf0d30f02f9d81821a88e9f236ddc70c5aa)](https://sonar.portal.kalisio.com/dashboard?id=kalisio-maplibre-ekosystem)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 _A collection of modules for Maplibre GL JS_
