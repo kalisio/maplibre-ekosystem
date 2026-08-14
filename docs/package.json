@@ -22,6 +22,7 @@
     "quasar": "catalog:",
     "vitepress": "catalog:",
     "vitepress-plugin-mermaid": "catalog:",
-    "vitepress-theme-kalisio": "catalog:"
+    "vitepress-theme-kalisio": "catalog:",
+    "vitepress-openapi": "catalog:"
   }
 }
