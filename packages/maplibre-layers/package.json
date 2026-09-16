@@ -1,0 +1,84 @@
+{
+  "name": "@kalisio/maplibre-layers",
+  "description": "Layer management for Kalisio map engine based on MapLibre",
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@10.1.0",
+  "exports": {
+    ".": {
+      "development": "./src/index.js",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "standard": {
+    "env": [
+      "browser"
+    ],
+    "ignore": [
+      "dist/**"
+    ]
+  },
+  "scripts": {
+    "build": "vite build",
+    "postbuild": "publint",
+    "lint": "standard --fix",
+    "test": "vitest run --coverage"
+  },
+  "keywords": [
+    "maplibre-layers"
+  ],
+  "author": {
+    "name": "KALISIO &lt;contact@kalisio.com&gt;",
+    "email": "",
+    "url": "https://github.com/kalisio"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalisio/maplibre-ekosystem.git",
+    "directory": "packages/maplibre-layers"
+  },
+  "bugs": {
+    "url": "https://github.com/kalisio/maplibre-ekosystem/issues"
+  },
+  "homepage": "https://github.com/kalisio/maplibre-ekosystem/tree/main/packages/maplibre-layers",
+  "dependencies": {
+    "@kalisio/common-graphics": "catalog:"
+  },
+  "peerDependencies": {
+    "@deck.gl/core": ">=9.0.0",
+    "@deck.gl/layers": ">=9.0.0",
+    "@deck.gl/geo-layers": ">=9.0.0",
+    "@deck.gl/mapbox": ">=9.0.0",
+    "@deck.gl/mesh-layers": ">=9.0.0",
+    "@loaders.gl/core": "^4.4.5",
+    "@loaders.gl/kml": "^4.4.5",
+    "@loaders.gl/las": "^4.4.5",
+    "@turf/bbox": "catalog:",
+    "@turf/convex": "catalog:",
+    "@turf/helpers": "catalog:",
+    "maplibre-gl": "catalog:",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "vite": "catalog:"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=10"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": {
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.cjs"
+      }
+    }
+  }
+}

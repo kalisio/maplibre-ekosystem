@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MapLibre Core - Light Theme Layer Panel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div class="app-layout">
+      
+      <!-- MAP CONTAINER -->
+      <main class="map-container" id="map-container" data-map>
+        <!-- MapLibre will inject here -->
+      </main>
+
+      <!-- TOP TOOLBAR -->
+      <!-- <div class="map-toolbar top-toolbar">
+        <button class="tool-btn" title="Pipette (Probing)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l4 4-10 10v4h4l10-10-4-4z" />
+            <path d="M16 6l2 2" />
+          </svg>
+        </button>
+        <div class="tool-divider"></div>
+        <button class="tool-btn" title="Dessiner Point">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+        </button>
+        <button class="tool-btn" title="Dessiner Ligne">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M4 20L20 4" />
+          </svg>
+        </button>
+        <button class="tool-btn" title="Dessiner Polygone">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linejoin="round">
+            <path d="M12 4L4 20h16z" />
+          </svg>
+        </button>
+      </div> -->
+      
+      <!-- RIGHT ALTITUDE SLIDER -->
+      <div class="map-toolbar right-altitude-slider">
+        <span class="slider-label">Level</span>
+        <input id="right-altitude-slider" type="range" orient="vertical" min="0" max="10000" value="0">
+        <span class="slider-value" id="slider-value">0m</span>
+      </div>
+      
+      <!-- BOTTOM TIME BAR -->
+      <div class="map-toolbar bottom-time-bar">
+        <button class="tool-btn" id="prev-time-step-btn" title="Précédent">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+
+        <input type="datetime-local" class="time-input" id="time-input" value="2026-01-23T12:00">
+
+        <select class="time-select" title="Pas de temps" id="time-step-select">
+          <option value="24h">24 h</option>
+          <option value="12h">12 h</option>
+          <option value="6h">6 h</option>
+          <option value="3h">3 h</option>
+          <option value="1h" selected>1 h</option>
+          <option value="30m">30 min</option>
+          <option value="20m">20 min</option>
+          <option value="15m">15 min</option>
+          <option value="12m">12 min</option>
+          <option value="10m">10 min</option>
+          <option value="5m">5 min</option>
+        </select>
+
+        <button class="tool-btn" id="next-time-step-btn" title="Suivant">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- RIGHT PANEL (LAYERS LIST) -->
+      <aside class="right-panel" id="right-panel">
+        <div class="panel-header">
+          <h2>Layers</h2>
+          <button id="toggle-right-panel" class="icon-btn" title="Toggle panel">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+        <div class="panel-content">
+          <ul class="layers-list" id="layers-list">
+            <!-- Layers will be injected by main.js -->
+          </ul>
+        </div>
+      </aside>
+
+      <!-- FLOATING BTN TO RESTORE RIGHT PANEL -->
+      <button class="floating-toggle-btn" id="floating-toggle-btn" title="Show layers">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+
+      <!-- FAB TO ADD CUSTOM GEOJSON -->
+      <button class="fab" id="fab-add-layer" title="Add Layer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+
+      <!-- MODAL FOR CUSTOM GEOJSON -->
+      <dialog id="add-layer-modal" class="modal">
+        <div class="modal-content">
+          <h3>Ajouter un calque GeoJSON</h3>
+          <div class="form-group">
+            <label for="new-layer-name">Nom du dataset</label>
+            <input type="text" id="new-layer-name" placeholder="Ex: Mon dataset" required>
+          </div>
+          <div class="form-group">
+            <label for="new-layer-geojson">GeoJSON</label>
+            <textarea id="new-layer-geojson" rows="6" placeholder="{&#10;  &quot;type&quot;: &quot;FeatureCollection&quot;,&#10;  &quot;features&quot;: []&#10;}" required></textarea>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn btn-text" id="modal-cancel">Annuler</button>
+            <button type="button" class="btn btn-primary" id="modal-submit">Ajouter</button>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- MODAL FOR STYLE SELECTION -->
+      <dialog id="style-modal" class="modal">
+        <div class="modal-content">
+          <h3>Sélectionner un style</h3>
+          <div class="form-group" id="style-options-container">
+            <!-- Radio buttons injected by main.js -->
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn btn-text" id="style-modal-cancel">Annuler</button>
+            <button type="button" class="btn btn-primary" id="style-modal-submit">Appliquer</button>
+          </div>
+        </div>
+      </dialog>
+
+    </div>
+  </body>
+</html>

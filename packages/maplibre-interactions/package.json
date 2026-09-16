@@ -1,0 +1,70 @@
+{
+  "name": "@kalisio/maplibre-interactions",
+  "description": "Interactions management for Kalisio map engine based on MapLibre",
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@10.1.0",
+  "exports": {
+    ".": {
+      "development": "./src/index.js",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "standard": {
+    "env": [
+      "browser"
+    ],
+    "ignore": [
+      "dist/**"
+    ]
+  },
+  "scripts": {
+    "build": "vite build",
+    "postbuild": "publint",
+    "lint": "standard --fix",
+    "test": "vitest run --coverage"
+  },
+  "keywords": [
+    "maplibre-interactions"
+  ],
+  "author": {
+    "name": "KALISIO &lt;contact@kalisio.com&gt;",
+    "email": "",
+    "url": "https://github.com/kalisio"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalisio/maplibre-ekosystem.git",
+    "directory": "packages/maplibre-interactions"
+  },
+  "bugs": {
+    "url": "https://github.com/kalisio/maplibre-ekosystem/issues"
+  },
+  "homepage": "https://github.com/kalisio/maplibre-ekosystem/tree/main/packages/maplibre-interactions",
+  "peerDependencies": {
+    "maplibre-gl": ">=4.0.0",
+    "terra-draw": ">=1.0.0"
+  },
+  "devDependencies": {
+    "vite": "catalog:"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=10"
+  },
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": {
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.cjs"
+      }
+    }
+  }
+}

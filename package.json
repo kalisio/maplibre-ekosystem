@@ -6,6 +6,9 @@
   "scripts": {
     "build": "pnpm -r --filter './packages/*' build",
     "prebump": "changeset",
+    "build:maplibre-core": "pnpm --filter @kalisio/maplibre-core build",
+    "build:maplibre-interactions": "pnpm --filter @kalisio/maplibre-interactions build",
+    "build:maplibre-layers": "pnpm --filter @kalisio/maplibre-layers build",
     "bump": "changeset version",
     "clear": "pnpm -r exec rimraf node_modules dist coverage",
     "docs:prepare": "pnpm --filter './examples/*' build",
@@ -13,13 +16,19 @@
     "docs:dev": "pnpm --filter docs run dev",
     "inspect": "pnpm knip",
     "lint": "pnpm -r lint",
+    "lint:maplibre-core": "pnpm --filter @kalisio/maplibre-core lint",
+    "lint:maplibre-interactions": "pnpm --filter @kalisio/maplibre-interactions lint",
+    "lint:maplibre-layers": "pnpm --filter @kalisio/maplibre-layers lint",
+    "postrelease": "git push --follow-tags",
+    "posttest": "pnpm lcov-result-merger --prepend-source-files 'packages/*/coverage/lcov.info' coverage/lcov.info",
     "prepare": "husky",
     "prerelease": "pnpm build",
-    "release": "changeset publish",
-    "postrelease": "git push --follow-tags",
     "pretest": "mkdir -p coverage",
+    "release": "changeset publish",
     "test": "pnpm -r test --coverage",
-    "posttest": "pnpm lcov-result-merger --prepend-source-files 'packages/*/coverage/lcov.info' coverage/lcov.info"
+    "test:maplibre-core": "pnpm --filter @kalisio/maplibre-core test",
+    "test:maplibre-interactions": "pnpm --filter @kalisio/maplibre-interactions test",
+    "test:maplibre-layers": "pnpm --filter @kalisio/maplibre-layers test"
   },
   "keywords": [
     "kalisio"
@@ -55,6 +64,6 @@
   },
   "metaCatalog": {
     "version": "0.10.0",
-    "syncedAt": "2026-08-28T15:32:00.487Z"
+    "syncedAt": "2026-09-16T12:24:25.795Z"
   }
 }

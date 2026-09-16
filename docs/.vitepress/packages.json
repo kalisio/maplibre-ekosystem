@@ -1,1 +1,5 @@
-[]
+[
+  "maplibre-core",
+  "maplibre-layers",
+  "maplibre-interactions"
+]
