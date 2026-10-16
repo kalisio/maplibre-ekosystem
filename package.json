@@ -25,7 +25,7 @@
     "postrelease": "git push --follow-tags",
     "pretest": "mkdir -p coverage",
     "posttest": "pnpm lcov-result-merger --prepend-source-files 'packages/*/coverage/lcov.info' coverage/lcov.info",
-    "test": "pnpm -r test --coverage",
+    "test": "pnpm -r test",
     "test:maplibre-core": "pnpm --filter @kalisio/maplibre-core test",
     "test:maplibre-interactions": "pnpm --filter @kalisio/maplibre-interactions test",
     "test:maplibre-layers": "pnpm --filter @kalisio/maplibre-layers test"

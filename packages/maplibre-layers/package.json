@@ -15,8 +15,23 @@
     "dist"
   ],
   "standard": {
-    "env": [
-      "browser"
+    "globals": [
+      "self",
+      "WorkerGlobalScope",
+      "ServiceWorkerGlobalScope",
+      "DOMParser",
+      "describe",
+      "it",
+      "test",
+      "expect",
+      "beforeAll",
+      "afterAll",
+      "beforeEach",
+      "afterEach",
+      "vi",
+      "WebGL2RenderingContext",
+      "OffscreenCanvas",
+      "Image"
     ],
     "ignore": [
       "dist/**"

@@ -15,8 +15,21 @@
     "dist"
   ],
   "standard": {
-    "env": [
-      "browser"
+    "globals": [
+      "self",
+      "WorkerGlobalScope",
+      "ServiceWorkerGlobalScope",
+      "DOMParser",
+      "describe",
+      "it",
+      "test",
+      "expect",
+      "beforeAll",
+      "afterAll",
+      "beforeEach",
+      "afterEach",
+      "vi",
+      "HTMLElement"
     ],
     "ignore": [
       "dist/**"

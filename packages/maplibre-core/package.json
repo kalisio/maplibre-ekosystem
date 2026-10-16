@@ -15,6 +15,21 @@
     "dist"
   ],
   "standard": {
+    "globals": [
+      "self",
+      "WorkerGlobalScope",
+      "ServiceWorkerGlobalScope",
+      "DOMParser",
+      "describe",
+      "it",
+      "test",
+      "expect",
+      "beforeAll",
+      "afterAll",
+      "beforeEach",
+      "afterEach",
+      "vi"
+    ],
     "ignore": [
       "dist/**"
     ]

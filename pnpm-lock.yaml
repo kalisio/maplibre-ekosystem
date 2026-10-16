@@ -151,8 +151,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/maplibre-core
       maplibre-gl:
-        specifier: ^4.7.1
-        version: 4.7.1
+        specifier: 'catalog:'
+        version: 6.4.0
     devDependencies:
       vite:
         specifier: 'catalog:'
