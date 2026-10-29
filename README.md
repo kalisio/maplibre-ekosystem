@@ -1,5 +1,6 @@
 # maplibre-ekosystem
 
+[![CI](https://github.com/kalisio/maplibre-ekosystem/actions/workflows/main.yaml/badge.svg)](https://github.com/kalisio/maplibre-ekosystem/actions/workflows/main.yaml)
 [![Quality Gate Status](https://sonar.portal.kalisio.com/api/project_badges/measure?project=kalisio-maplibre-ekosystem&metric=alert_status&token=sqb_e63b08dccc542c551e3979bce17c1efc759e9568)](https://sonar.portal.kalisio.com/dashboard?id=kalisio-maplibre-ekosystem)
 [![Maintainability Rating](https://sonar.portal.kalisio.com/api/project_badges/measure?project=kalisio-maplibre-ekosystem&metric=software_quality_maintainability_rating&token=sqb_e63b08dccc542c551e3979bce17c1efc759e9568)](https://sonar.portal.kalisio.com/dashboard?id=kalisio-maplibre-ekosystem)
 [![Security Rating](https://sonar.portal.kalisio.com/api/project_badges/measure?project=kalisio-maplibre-ekosystem&metric=software_quality_security_rating&token=sqb_e63b08dccc542c551e3979bce17c1efc759e9568)](https://sonar.portal.kalisio.com/dashboard?id=kalisio-maplibre-ekosystem)
